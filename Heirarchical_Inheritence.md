@@ -31,6 +31,101 @@ To write a Python program that uses **Hierarchical Inheritance** to input and di
 5. Display collected information using class methods.
 
 ## Program
-Add code here
-## Sample Output
+class Details:
 
+    def get_basic_details(self, id, name, gender):
+
+        self.id = id
+        
+        self.name = name
+        
+        self.gender = gender
+
+class Employee(Details):
+    
+    def get_employee_details(self, company, department):
+    
+        self.company = company
+        
+        self.department = department
+
+    def display(self):
+        
+        print("Employee Object")
+        
+        print("Id: ", self.id)
+        
+        print("Name: ", self.name)
+        
+        print("Gender: ", self.gender)
+        
+        print("Company: ", self.company)
+        
+        print("Department: ", self.department)
+        
+        print()
+
+class Patient(Details):
+    
+    def get_patient_details(self, hospital, department):
+    
+        self.hospital = hospital
+        
+        self.department = department
+
+    def display(self):
+        
+        print("Patient Object")
+        
+        print("Id: ", self.id)
+        
+        print("Name: ", self.name)
+        
+        print("Gender: ", self.gender)
+        
+        print("Hospital: ", self.hospital)
+        
+        print("Department: ", self.department)
+        
+        print()
+
+eid = int(input())
+
+ename = input()
+
+egender = input()
+
+company = input()
+
+edept = input()
+
+pid = int(input())
+
+pname = input()
+
+pgender = input()
+
+hospital = input()
+
+pdept = input()
+
+emp = Employee()
+
+emp.get_basic_details(eid, ename, egender)
+
+emp.get_employee_details(company, edept)
+
+pat = Patient()
+
+pat.get_basic_details(pid, pname, pgender)
+
+pat.get_patient_details(hospital, pdept)
+
+emp.display()
+
+pat.display()
+
+## Output
+<img width="1150" height="454" alt="image" src="https://github.com/user-attachments/assets/f2188c96-6983-4bf6-9292-706c8f85fa00" />
+## Result
+Thus, the Python program that uses **Hierarchical Inheritance** to input and display **Employee** and **Patient** details is executed and verified successfully.
